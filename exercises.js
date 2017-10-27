@@ -245,7 +245,7 @@ function createFullName(firstName, lastName) {
   return firstName + lastName;
 }
 
-console.log(createFullname("Elliah ", "Herradura"));
+console.log(createFullName("Elliah ", "Herradura"));
 /*this directly passes the code*/
 
 /*
@@ -263,7 +263,7 @@ console.log(createFullname("Elliah ", "Herradura"));
  */
 
  function eatFood(firstName, lastName, food) {
-  return firstName + lastName + " likes to eat " + food +;
+  return firstName + lastName + " likes to eat " + food ;
  }
 
 console.log(eatFood("Elliah ", "Herradura", "shrimp"));
@@ -308,8 +308,11 @@ allCaps("turn this sentence into all caps!");
  * This function will capitalize only the first letter in the variable phase above. 
  * Console.log your result.
 */
+function oneCap(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
-
+console.log(oneCap("will this turn the first letter into a cap?"));
 
 /*
  * #17
@@ -321,7 +324,12 @@ allCaps("turn this sentence into all caps!");
  * Call this function and pass in a number value.
  * Store the return value to a variable named `canDrink`. Console.log your result.
  */
+ function verifyDrinkingAge(age) {
+  return Boolean(age > 21);
+ }
 
+var canDrink = verifyDrinkingAge(19);
+console.log(canDrink);
 
 
 /**
@@ -330,7 +338,17 @@ allCaps("turn this sentence into all caps!");
  * Create a function named throwParty. This function will check the value stored in the `canDrink` variable in the previous exercise. If the value is true, it will return the message "Cheee Hoo! We going to da party!" If false, then it will return the message "Meh, see you at Starbucks." Store the return value to a variable named `canParty`. Console.log your result.
  */
 
+function throwParty() {
+  if(canDrink === true){
+    return "Cheee Hoo! We going to da party!";
+  }
+  if(canDrink === false){
+    return "Meh, see you at Starbucks.";
+  }
+}
 
+var canDrink = canDrink;
+console.log(throwParty());
 
 
 
