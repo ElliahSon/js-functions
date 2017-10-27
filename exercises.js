@@ -328,7 +328,7 @@ console.log(oneCap("will this turn the first letter into a cap?"));
   return Boolean(age > 21);
  }
 
-var canDrink = verifyDrinkingAge(19);
+var canDrink = verifyDrinkingAge(18);
 console.log(canDrink);
 
 
@@ -337,16 +337,16 @@ console.log(canDrink);
  * Function - throwParty
  * Create a function named throwParty. This function will check the value stored in the `canDrink` variable in the previous exercise. If the value is true, it will return the message "Cheee Hoo! We going to da party!" If false, then it will return the message "Meh, see you at Starbucks." Store the return value to a variable named `canParty`. Console.log your result.
  */
-
+/* for boolean you dont need === because boolean just checks if its true or not*/
 function throwParty() {
-  if(canDrink === true){
+  if(canDrink /*=== true*/){
     return "Cheee Hoo! We going to da party!";
-  }
-  if(canDrink === false){
+  }else{
+    (canDrink/*=== false*/)
     return "Meh, see you at Starbucks.";
   }
 }
-
+/* === means equality sign*/
 var canDrink = canDrink;
 console.log(throwParty());
 
